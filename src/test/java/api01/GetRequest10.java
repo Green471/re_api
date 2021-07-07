@@ -24,5 +24,8 @@ public class GetRequest10 extends TestBase{
         System.out.println(list);
         softAssert.assertEquals(list.size(),14,"elemen sayisi is not mathced");
         softAssert.assertAll();
+
+        List<String> nameList=json.getList("data.findAll{Integer.valueOf(it.employee_salary)>350000}.employee_name");
+        System.out.println(nameList);
     }
 }

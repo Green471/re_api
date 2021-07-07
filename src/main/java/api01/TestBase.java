@@ -7,7 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 public class TestBase {
 
-    protected RequestSpecification spec01,spec02;
+    protected RequestSpecification spec01,spec02, spec03;
 
 
 
@@ -24,6 +24,13 @@ public class TestBase {
                 build();
 
 
+    }
+
+    @Before
+    public void setUp03(){
+        spec03=new RequestSpecBuilder().
+                setBaseUri("http://jsonplaceholder.typicode.com/todos").
+                build();
     }
 
 
